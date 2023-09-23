@@ -13,7 +13,7 @@ secure = tk.IntVar()
 brand = tk.StringVar()
 product = tk.StringVar()
 
-usernamelist = ['蕭合亭']
+usernamelist = ['name']
 username = ttk.Combobox( win, state='readonly' )
 username['values'] = usernamelist
 username.pack(pady=10)
