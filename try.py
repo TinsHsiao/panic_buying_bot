@@ -27,8 +27,8 @@ driver.find_element_by_xpath("/html/body/div[8]/div[1]/div/div/div/div/div/div/d
 def goopi_login() :
     element = wait.until(EC.element_to_be_clickable((By.XPATH,'/html/body/div[8]/div[1]/div/div/div/div/div/div/div/div/div[2]/div/div/div/div[1]/div/a/span')))
     driver.find_element_by_xpath( "/html/body/div[8]/div[1]/div/div/div/div/div/div/div/div/div[2]/div/div/div[1]/div/a/span" ).click()
-    account = driver.find_element_by_xpath( '//*[@id="email"]').send_keys("tinahsiao900510@hotmail.com.tw")
-    pas = driver.find_element_by_xpath( '//*[@id="pass"]').send_keys("Th09550885311524")
+    account = driver.find_element_by_xpath( '//*[@id="email"]').send_keys("account")
+    pas = driver.find_element_by_xpath( '//*[@id="pass"]').send_keys("passeord")
     driver.find_element_by_xpath('//*[@id="loginbutton"]').click()
 
 
@@ -59,7 +59,7 @@ def goopi() :
     driver.find_element_by_xpath('//*[@id="fixed-menu-container"]/div[2]/div[4]/form/input').send_keys(Keys.ENTER)
     driver.find_element_by_partial_link_text('(A).03G - “DUET” D-L So Wide Tee - White').click()
     select = Select(driver.find_element_by_xpath('/html/body/div[7]/div[1]/div/div/div/div[2]/div[3]/div[2]/div[3]/div[1]/div[2]/select'))
-    select.select_by_visible_text("1號") # 尺寸
+    select.select_by_visible_text("size") # 尺寸
     #driver.find_element_by_xpath('/html/body/div[7]/div[1]/div/div/div/div[2]/div[3]/div[2]/div[3]/div[2]/div[2]/div/span[2]/button').click() # 數量
     driver.find_element_by_xpath('//*[@id="#btn-variable-buy-now"]').click()
 
@@ -67,9 +67,9 @@ def goopi() :
     driver.implicitly_wait(5)
     driver.find_element_by_xpath('//*[@id="checkout-container"]/div/div[3]/div[4]/div[2]/section/div[2]/a').click()
     driver.find_element_by_xpath('//*[@id="order-customer-phone"]').clear()
-    driver.find_element_by_xpath('//*[@id="order-customer-phone"]').send_keys('0975054215')
+    driver.find_element_by_xpath('//*[@id="order-customer-phone"]').send_keys('phone number')
     driver.find_element_by_xpath('//*[@id="user-field-598198f2d4e395db79000a21"]').clear()
-    driver.find_element_by_xpath('//*[@id="user-field-598198f2d4e395db79000a21"]').send_keys('tinahsiao900510')
+    driver.find_element_by_xpath('//*[@id="user-field-598198f2d4e395db79000a21"]').send_keys('account')
     driver.implicitly_wait(1)
     driver.find_element_by_xpath('//*[@id="delivery-form-content"]/div[1]/label').click()
     driver.implicitly_wait(1)
@@ -82,7 +82,7 @@ def goopi() :
     iframe1 = driver.find_element_by_tag_name("iframe")
     driver.switch_to_frame(iframe1)
     driver.find_element_by_xpath('/html/body/div/div/div/div/div[1]/ul/li/div').click()
-    driver.find_element_by_xpath('//*[@id="storeNameKey"]').send_keys('武聖門市')
+    driver.find_element_by_xpath('//*[@id="storeNameKey"]').send_keys('7-11門市')
     driver.find_element_by_xpath('//*[@id="send"]').click()
 
 
@@ -100,13 +100,13 @@ def goopi() :
     driver.find_element_by_xpath('//*[@id="input-file"]').send_keys('卡號')
     driver.switch_to_default_content()
     driver.switch_to_frame(iframe2[1])
-    driver.find_element_by_xpath('//*[@id="input-file"]').send_keys('蕭合亭')
+    driver.find_element_by_xpath('//*[@id="input-file"]').send_keys('name')
     driver.switch_to_default_content()
     driver.switch_to_frame(iframe2[2])
-    driver.find_element_by_xpath('//*[@id="input-file"]').send_keys('0525')
+    driver.find_element_by_xpath('//*[@id="input-file"]').send_keys('到期日')
     driver.switch_to_default_content()
     driver.switch_to_frame(iframe2[3])
-    driver.find_element_by_xpath('//*[@id="input-file"]').send_keys('安全馬')
+    driver.find_element_by_xpath('//*[@id="input-file"]').send_keys('安全碼')
     driver.switch_to_default_content()
 
     select = Select(driver.find_element_by_xpath('//*[@id="invoice-type"]'))
